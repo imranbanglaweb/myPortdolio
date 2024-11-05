@@ -2,7 +2,7 @@
   
    <div class="sidebar">
 
-  <sidebar-menu :menu="menu" />
+  <sidebar-menu :menu="menu"/>
 
   
     </div>
@@ -15,7 +15,7 @@
 
     data() {
       return {
-
+isCollapsed: true, // Collapse by default on small screens
         menu: [
          {
           header: false,
@@ -75,8 +75,8 @@
   }
           },
           {
-            href: '/services',
-            title: 'My Service',
+            href: '/contactpage',
+            title: 'Contact Me',
               icon: {
     element: 'font-awesome-icon',
     attributes: {
@@ -87,19 +87,32 @@
           }
         ]
       }
-    }
+    },
+
+ methods: {
+    handleResize() {
+      this.isCollapsed = window.innerWidth < 768; // Adjust breakpoint as needed
+    },
+  },
+  mounted() {
+    window.addEventListener('resize', this.handleResize);
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.handleResize);
+  }
+
   }
 </script>
 
 
 
 <style scoped>
-.sidebar {
+/*.sidebar {
   width: 200px;
   background-color: #333;
   color: #000;
   padding: 15px;
-}
+}*/
 .sidebar nav a {
   display: block;
   color: #fff;

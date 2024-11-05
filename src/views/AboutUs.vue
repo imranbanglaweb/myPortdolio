@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container AboutUs">
     <h1 class="text-left">About Me</h1>
     <p>I specialize in JavaScript frameworks such as Vue.js and React, as well as backend technologies like Laravel and SAP ABAP.My toolkit also includes HTML, CSS, SQL, and cloud services such as AWS and Azure.
     </p>
@@ -44,6 +44,24 @@ export default {
 
 };
 </script>
+
+<style type="text/css">
+  
+  .AboutUs h1{
+  width: 100%;
+  font-size: 45px;
+  padding: 10px;
+  color: #fff;
+  opacity: 1
+}
+.AboutUs p{
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+  color: black;
+  margin-left: 10px
+}
+</style>
 
 
 
