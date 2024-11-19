@@ -1,11 +1,14 @@
 <template>
 
     <!-- Main Content Area -->
-    <div class="content" :class="{ 'content-expanded': isCollapsed }">
-      <button @click="toggleSidebar" class="menu-toggle">Toggle Sidebar</button>
+    <div class="content">
+     
       
       <!-- Contact Form -->
-      <div class="contact-form">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+          <div class="contact-form">
         <h2>Contact Us</h2>
         <form @submit.prevent="handleSubmit">
           <label for="name">Name</label>
@@ -20,8 +23,31 @@
           <button type="submit">Submit</button>
         </form>
       </div>
+      </div>
+      <div class="col-md-6">
+        <br>
+        <h3>Connect Social Link</h3>
+      <hr>
+         <div class="social-icons">
+  <ul>
+          <li><a href=""> <font-awesome-icon :icon="['fab', 'facebook']" class="icon facebook" />  Facebook</a></li>
+          <li><a href=""><font-awesome-icon :icon="['fab', 'linkedin']" class="icon linkedin" /> Linkdein</a></li>
+          <li><a href=""><font-awesome-icon :icon="['fab', 'instagram']" class="icon instagram" /> Instagram</a></li>
+          <li><a href="">  <font-awesome-icon :icon="['fab', 'whatsapp']" class="icon instagram" /> Whatsup</a></li>
+          <li><a href="">    <font-awesome-icon :icon="['fas', 'globe']" class="icon website" /> Website</a></li>
+        </ul>
+    <br>
+  </div>
+        <h3>You Can Reache me 24/7</h3>
+        <hr>
+        <ul style="list-style: none; ">
+          <li><a style="text-decoration: none; color: #000" href=""><font-awesome-icon :icon="['fas', 'phone']" class="icon website" /> &nbsp;
+         01918329829</a></li>
+        </ul>
+      </div>
     </div>
-   
+    </div>
+  
 </template>
 
 <script>
@@ -38,36 +64,24 @@ export default {
       },
     };
   },
-  methods: {
-    handleResize() {
-      this.isCollapsed = window.innerWidth < 768;
-    },
-    toggleSidebar() {
-      this.isCollapsed = !this.isCollapsed;
-    },
-    handleSubmit() {
-      // Process form submission (e.g., send data to a server or show a success message)
-      alert(`Message sent by ${this.form.name}`);
-      
-      // Reset the form fields
-      this.form.name = '';
-      this.form.email = '';
-      this.form.message = '';
-    },
-  },
+
  
 };
 </script>
 
 <style type="text/css">
+
+
   /* Contact Form Styling */
 .contact-form {
   max-width: 600px;
   margin: 20px auto;
+    margin-left: 15px
 }
 
 .contact-form h2 {
   margin-bottom: 20px;
+  margin-left: 15px
 }
 
 .contact-form label {
@@ -97,5 +111,42 @@ export default {
 
 .contact-form button:hover {
   background-color: #0056b3;
+}
+
+/* Base icon styling */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+.social-icons ul{
+  list-style: none
+}
+.social-icons ul li a {
+    display: block;
+    padding: 16px 2px 5px 5px;
+    text-decoration: none;
+    color: #6b290a;
+}
+.icon {
+  font-size: 1.5rem; /* Adjust icon size */
+  transition: color 0.3s ease, transform 0.3s ease;
+  /*padding: 0 2px 0 0px*/
+}
+
+/* Specific brand colors */
+.facebook {
+  color: #4267B2;
+}
+.instagram {
+  color: #1DA1F2;
+}
+.linkedin {
+  color: #0077B5;
+}
+
+/* Hover effects */
+.icon:hover {
+  color: #333; /* Change color on hover */
+  transform: scale(1.2); /* Slightly enlarge on hover */
 }
 </style>

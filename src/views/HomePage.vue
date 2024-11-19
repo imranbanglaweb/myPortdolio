@@ -1,6 +1,6 @@
 <template>
-<div class="container-fluid">
-  <div class="row">
+<div class="">
+
   <div class="HomePage">
 <!-- <button @click="isCollapsed = !isCollapsed">
         Toggle Sidebar
@@ -9,7 +9,7 @@
      <p> <TypewriterComponent text="I am a Full Stack Developer with a focus on SAP ABAP and modern web technologies!" :typingSpeed="60" :loop="true" /> </p>   
 
     </div>
-  </div>
+ 
 </div>
 </template>
 
@@ -24,25 +24,25 @@ export default {
 <style>
 .HomePage {
 	width: 100%;
-  height: 180vh; 
+  height: 100vh; 
     background-image: url('@/assets/images/imran02.jpg'); 
   background-size: cover; /* Cover the entire area */
-  background-position: top right; /* Center the image */
+  background-position: top center; /* Center the image */
   /*background-attachment: fixed;*/
   background-repeat: no-repeat;
   position: relative;
 }
 .HomePage h1{
-	width: 100%;
+	/*width: 100%;*/
 	font-size: 45px;
-  /*padding: 10px;*/
+  padding: 10px;
 	color: #fff;
   opacity: 1
 }
 .HomePage p{
   width: 100%;
   font-size: 35px;
-  /*padding: 10px;*/
+  padding: 10px;
   color: yellow
 }
 

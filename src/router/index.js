@@ -5,6 +5,7 @@ import HomePage from '@/views/HomePage.vue';
 import AboutUs from '@/views/AboutUs.vue';
 import MyProjects from '@/views/MyProjects.vue';
 import ContactPage from '@/views/ContactPage.vue';
+import MyExperience from '@/views/MyExperience.vue';
 // import SideMenu from '@/views/SideMenu.vue';
 // import Projects from '@/views/Projects.vue';
 // import Contact from '@/views/Contact.vue';
@@ -16,6 +17,7 @@ const routes = [
   { path: '/', name: 'HomePage', component: HomePage },
   { path: '/about-us', name: 'AboutUs', component: AboutUs },
   { path: '/projects', name: 'MyProjects', component: MyProjects },
+  { path: '/my-cv', name: 'MyExperience', component: MyExperience },
   { path: '/contactpage', name: 'ContactPage', component: ContactPage },
   // { path: '/contact', name: 'Contact', component: Contact },
 ];

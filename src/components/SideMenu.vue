@@ -2,7 +2,15 @@
   
    <div class="sidebar">
 
-  <sidebar-menu :menu="menu"/>
+  <!-- <sidebar-menu :menu="menu"/> -->
+  <sidebar-menu :menu="menuItems">
+    <template v-slot="{ item }">
+      <div class="menu-item">
+        <img v-if="item.imgSrc" :src="item.imgSrc" class="menu-icon" alt="icon" />
+        <span>{{ item.name }}</span>
+      </div>
+    </template>
+  </sidebar-menu>
 
   
     </div>
@@ -16,30 +24,15 @@
     data() {
       return {
 isCollapsed: true, // Collapse by default on small screens
-        menu: [
+        menuItems: [
          {
-          header: false,
           title: 'Imran Rahman'
         },
-        //   {
-        //     title: 'Imran',
-        //     // icon: require('@/assets/logo.png'),  
-        //      isExternal: true,
-        // image: require('@/assets/profile.png'), // Path to the image
-
-        //   },
-        
-          // {
-          //   href: '/',
-          //   // title: 'Facebook',
-          //   icon: {
-          //   element: 'font-awesome-icon',
-          //   attributes: {
-          //       // Then under icon.attributes, specify the icon to use
-          //       icon: ["fab", "linkedin"],
-          //     }
-          //   }
-          // },
+         {
+          // title: 'Profile',
+          imgSrc: require('@/assets/logo.png'),
+          path: '/profile',
+        },
         
           {
             href: '/',
@@ -75,6 +68,17 @@ isCollapsed: true, // Collapse by default on small screens
   }
           },
           {
+            href: '/my-cv',
+            title: 'My Experience',
+              icon: {
+    element: 'font-awesome-icon',
+    attributes: {
+      // Then under icon.attributes, specify the icon to use
+      icon: 'certificate'
+    }
+  }
+          },
+          {
             href: '/contactpage',
             title: 'Contact Me',
               icon: {
@@ -89,17 +93,7 @@ isCollapsed: true, // Collapse by default on small screens
       }
     },
 
- methods: {
-    handleResize() {
-      this.isCollapsed = window.innerWidth < 768; // Adjust breakpoint as needed
-    },
-  },
-  mounted() {
-    window.addEventListener('resize', this.handleResize);
-  },
-  beforeUnmount() {
-    window.removeEventListener('resize', this.handleResize);
-  }
+
 
   }
 </script>

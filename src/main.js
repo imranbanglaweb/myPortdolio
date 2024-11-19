@@ -7,9 +7,9 @@ import App from './App.vue';
 // import FontAwesomeIcon from './plugins/fontawesome';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHome, faUser,faList, faInfo } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser,faList, faInfo, faGlobe, faPhone, faCheck, faBriefcase, faCalendar , faUniversity, faMapMarkerAlt, faEnvelope, faCertificate, faGraduationCap    } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faTwitter, faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faFacebook, faInstagram, faLinkedin, faWhatsapp  } from '@fortawesome/free-brands-svg-icons';
 // Import Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap'
@@ -21,7 +21,7 @@ import 'vue3-perfect-scrollbar/style.css';
 // import HomePage from './views/HomePage.vue';
 import router from './router';
 
-library.add(faHome, faUser, faList, faInfo, faFacebook, faTwitter, faInstagram, faLinkedin)
+library.add(faPhone,faHome, faUser, faList, faInfo, faFacebook, faUniversity, faBriefcase, faEnvelope, faCalendar , faGraduationCap, faMapMarkerAlt, faCertificate,  faTwitter, faCheck, faGlobe, faInstagram, faLinkedin, faWhatsapp)
 // Ensure the app navigates to the default route on load
 // router.isReady().then(() => {
 //   if (router.currentRoute.value.path === '/') {

@@ -1,5 +1,6 @@
 <template>
-<PerfectScrollbar class="my-scrollbar">
+
+<PerfectScrollbar>
   <div class="container-fluid">
     <h2 class="mb-4">My Awsome Projects</h2>
     <hr>
@@ -339,36 +340,21 @@
        </div>
       </div>
     </div>
-  </div>
+
+</div>
 </PerfectScrollbar>
 </template>
 
 <script>
 export default {
   name: 'MyProjects',
+
+
 }
 </script>
 
 <style scoped>
-/* Additional styling if needed */
-.container {
-  max-width: 800px;
-}
-.my-scrollbar {
-  max-height: 1000px; /* Define your desired height */
-  overflow: hidden;  /* Hide native scrollbar */
-}
 
-/* Basic styling for Perfect Scrollbar */
-.ps__rail-y {
-  background-color: #ddd; /* Background color of the scrollbar rail */
-  width: 10px;            /* Width of the scrollbar */
-}
-
-.ps__thumb-y {
-  background-color: #333; /* Color of the scrollbar thumb */
-  border-radius: 5px;     /* Rounded corners for the thumb */
-}
 
 #projectTabContent img {
   border:1px solid #666;

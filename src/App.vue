@@ -1,12 +1,12 @@
 <template>
-  <div class="app-container">
+  <div class="app">
     <!-- Sidebar -->
     <vue-sidebar-menu :collapsed="isCollapsed" class="sidebar">
       <!-- Add menu items here -->
     </vue-sidebar-menu>
 
     <!-- Main Content Area -->
-    <div class="content" :class="{ 'content-expanded': isCollapsed }">
+    <div class="content">
       <!-- <button @click="toggleSidebar" class="menu-toggle">Toggle Sidebar</button> -->
       <router-view></router-view>
     </div>
@@ -44,26 +44,44 @@ export default {
 </script>
 
 <style scoped>
+body::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888; /* color of the thumb */
+  border-radius: 4px; /* rounded corners */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* hover effect */
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* background of the track */
+  border-radius: 4px; /* rounded corners */
+}
+
 /* Layout container */
-.app-container {
+.app {
   display: flex;
 }
 
 /* Sidebar styles */
 .sidebar {
-  width: 280px; /* Default sidebar width */
+  width: 288px;
   transition: width 0.3s;
 }
 
 .sidebar.collapsed {
-  width: 70px; /* Collapsed sidebar width */
+  width: 70px; 
 }
 
 /* Content area */
 .content {
   flex: 1;
-  padding: 20px;
-  transition: margin-left 0.3s;
+  /*padding: 20px;*/
+  /*transition: margin-left 0.3s;*/
 }
 
 .content-expanded {
