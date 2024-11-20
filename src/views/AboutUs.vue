@@ -1,5 +1,5 @@
 <template>
-  <div class="container AboutUs">
+  <div class="AboutUs">
     <h1 class="text-left">About Me</h1>
     <p>I specialize in JavaScript frameworks such as Vue.js and React, as well as backend technologies like Laravel and SAP ABAP.My toolkit also includes HTML, CSS, SQL, and cloud services such as AWS and Azure.
     </p>
@@ -52,9 +52,9 @@
 <br>
 <br>
 <br>
-<div class="col-md-12">
+<div class="col-md-12 col-sm-12">
    <div class="card-body">
-             <img :src="require('@/assets/images/Web-Tools.jpg')" :width="'600'" alt="My Image" style="text-align: center; margin: 0 auto;border-radius: 10px;display: block;padding: 10px; border:1px solid #ddd" />
+             <img  class="img-responsive text-center" :src="require('@/assets/images/Web-Tools.jpg')" :width="'600'" alt="My Image" style="text-align: center; margin: 0 auto;border-radius: 10px;display: block;padding: 10px; border:1px solid #ddd" />
           </div>
           <br>
           <br>
@@ -74,6 +74,9 @@ export default {
 
 <style type="text/css">
   
+  .AboutUs{
+    width: 100%
+  }
   .AboutUs h1{
   width: 100%;
   font-size: 45px;

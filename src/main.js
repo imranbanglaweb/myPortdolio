@@ -5,6 +5,7 @@ import App from './App.vue';
 
 // import TypewriterComponent from '@/components/TypewriterComponent.vue'
 // import FontAwesomeIcon from './plugins/fontawesome';
+import 'font-awesome/css/font-awesome.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faHome, faUser,faList, faInfo, faGlobe, faPhone, faCheck, faBriefcase, faCalendar , faUniversity, faMapMarkerAlt, faEnvelope, faCertificate, faGraduationCap    } from '@fortawesome/free-solid-svg-icons'
