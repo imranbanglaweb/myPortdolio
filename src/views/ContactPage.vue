@@ -1,7 +1,7 @@
 <template>
 
     <!-- Main Content Area -->
-    <div class="content">
+    <div class="container-fluid">
      
       
       <!-- Contact Form -->

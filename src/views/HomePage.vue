@@ -42,9 +42,9 @@ html, body {
   height: 100vh; /* Full viewport height */
   background-image: url('@/assets/images/imran02.jpg'); /* Replace with your image path */
   background-size: cover; /* Ensure the image covers the entire viewport */
-  background-position: right top; /* Center the image */
+  background-position: center top; /* Center the image */
   background-repeat: no-repeat; /* Prevent tiling */
-  /*display: flex;*/
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;

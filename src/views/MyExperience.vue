@@ -1,7 +1,7 @@
 <template>
 
     <!-- Main Content Area -->
-    <div class="content">
+    <div class="container-fluid">
       <br>
      <h3 class="px-4">My Experience</h3>
      <hr>

@@ -65,7 +65,7 @@ export default {
 
 /* Sidebar Styles */
 .sidebar {
-  width: 200px; /* Set a width for the sidebar */
+  width: 270px; /* Set a width for the sidebar */
   height: 100vh;
   background: #333;
   color: white;
@@ -109,12 +109,12 @@ export default {
   background: #444;
   border: none;
   color: white;
-  font-size: 30px;
-  padding: 10px;
+  font-size: 15px;
+  padding: 10px 15px;
   cursor: pointer;
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 0px;
+  left: 0px;
   z-index: 20;
   display: none; /* Hidden by default on larger screens */
 }
@@ -133,7 +133,7 @@ export default {
 @media (min-width: 769px) {
   .sidebar {
     transform: none; /* Sidebar is always visible on larger screens */
-    width: 250px; /* Keep the sidebar at the set width */
+    width: 270px; /* Keep the sidebar at the set width */
   }
 
   .toggle-btn {

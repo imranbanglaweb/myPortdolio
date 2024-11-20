@@ -1,14 +1,23 @@
 <template>
   <div class="app">
-    <!-- Sidebar -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+          <!-- Sidebar -->
     <vue-sidebar-menu :collapsed="isCollapsed" class="sidebar">
       <!-- Add menu items here -->
     </vue-sidebar-menu>
 
-    <!-- Main Content Area -->
+  
+      </div>
+      <div class="col-md-10">
+          <!-- Main Content Area -->
     <div :class="['content', { 'content-expanded': !isCollapsed }]">
       <router-view></router-view>
     </div>
+      </div>
+    </div>
+  </div>
 
   
   </div>
@@ -72,7 +81,7 @@ body::-webkit-scrollbar-track {
   top: 0;
   left: 0;
   z-index: 10;
-  padding-top: 60px; /* To ensure space for content when collapsed */
+  padding-top: 10px; /* To ensure space for content when collapsed */
 }
 
 /* Mobile view: Sidebar is initially hidden */
