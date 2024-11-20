@@ -83,7 +83,9 @@ export default {
   padding: 0;
   margin: 0;
 }
-
+.menu i {
+  color: yellowgreen
+}
 .menu-item {
   padding: 15px 20px;
 }
